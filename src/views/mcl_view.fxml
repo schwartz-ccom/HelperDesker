@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MCLController">
+   <top>
+      <MenuBar prefWidth="698.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Database">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Create a Database" />
+                  <MenuItem mnemonicParsing="false" text="Load Database" />
+              <MenuItem fx:id="mnItemClearInventory" mnemonicParsing="false" text="Clear Database List" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Settings" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <SplitPane prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="389.0">
+               <children>
+                  <TableView fx:id="tableMCL" minHeight="-Infinity" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="columnInventoried" minWidth="75.0" prefWidth="100.0" text="Last Inventoried" />
+                        <TableColumn fx:id="columnType" minWidth="75.0" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="columnName" minWidth="75.0" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="columnSteward" minWidth="75.0" prefWidth="75.0" text="Steward" />
+                        <TableColumn fx:id="columnFacility" minWidth="75.0" prefWidth="75.0" text="Facility" />
+                        <TableColumn fx:id="columnRoom" minWidth="75.0" prefWidth="75.0" text="Room" />
+                        <TableColumn fx:id="columnMake" minWidth="75.0" prefWidth="75.0" text="Make" />
+                        <TableColumn fx:id="columnModel" minWidth="75.0" prefWidth="75.0" text="Model" />
+                        <TableColumn fx:id="columnSerial" minWidth="75.0" prefWidth="75.0" text="Serial" />
+                        <TableColumn fx:id="columnComments" minWidth="300.0" prefWidth="75.0" text="Comments" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnSample" layoutX="14.0" layoutY="533.0" mnemonicParsing="false" text="Do Random Sample" AnchorPane.bottomAnchor="14.333333333333297" AnchorPane.leftAnchor="14.0" />
+                  <Slider fx:id="sliderSampleCount" layoutX="148.0" layoutY="527.0" majorTickUnit="10.0" max="55.0" min="5.0" minorTickCount="5" prefHeight="14.0" prefWidth="220.0" showTickLabels="true" showTickMarks="true" AnchorPane.bottomAnchor="8.333333333333293" />
+                  <Label fx:id="lblStatus" layoutX="371.0" layoutY="537.0" AnchorPane.bottomAnchor="18.333333333333297" AnchorPane.leftAnchor="371.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
